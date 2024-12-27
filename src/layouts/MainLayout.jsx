@@ -2,10 +2,7 @@ import React from 'react';
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="main-layout">
-      <header>
-        <h1>Mi Aplicación</h1>
-      </header>
+    <div className="bg-zinc-900 min-h-screen">
       <main>
         {children}
       </main>

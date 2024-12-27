@@ -5,7 +5,7 @@ import MainLayout from './layouts/MainLayout';
 function App() {
   return (
     <MainLayout>
-      <Navbar />
+      <Navbar activeLink="Catálogo"/>
       App
     </MainLayout>
   );
