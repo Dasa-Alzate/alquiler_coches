@@ -2,12 +2,12 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import MainLayout from '../layouts/MainLayout';
 
-const Detalles = () => {
+const Contacto = () => {
   return (
     <MainLayout>
-      <Navbar activeLink="Detalles"/>
+      <Navbar activeLink="Contacto"/>
     </MainLayout>
   );
 };
 
-export default Detalles;
+export default Contacto;

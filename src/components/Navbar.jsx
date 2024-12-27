@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 
 const Navbar = ({ activeLink, isLogged }) => {
-  const links = ['Catálogo', 'Reseñas', 'Contacto'];
+  const links = ['Inicio', 'Reseñas', 'Contacto'];
 
   return (
     <nav className="bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex w-full justify-between items-center">
@@ -13,9 +14,9 @@ const Navbar = ({ activeLink, isLogged }) => {
         {links.map((link) => {
           return (
             <li key={link}>
-              <a href={`/${link.toLowerCase()}`} className={`hover:text-gray-200 ${activeLink == link ? 'font-semibold text-white' : ''}`} >
+              <Link to={`/${link.toLowerCase()}`} className={`hover:text-gray-200 ${activeLink == link ? 'font-semibold text-white' : ''}`} >
                 {link}
-              </a>
+              </Link>
             </li>
           )
         })}
