@@ -6,7 +6,7 @@ const Navbar = ({ activeLink, isLogged }) => {
   const links = ['Inicio', 'Reseñas', 'Contacto'];
 
   return (
-    <nav className="bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex w-full justify-between items-center">
+    <nav className="bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex w-full justify-around items-center">
 
       <img src="logo.svg" alt="logo" />
 

@@ -6,9 +6,6 @@ const MainLayout = ({ children }) => {
       <main>
         {children}
       </main>
-      <footer>
-        <p>© 2024 Mi Aplicación</p>
-      </footer>
     </div>
   );
 };
