@@ -4,6 +4,7 @@ import Filterbar from '../components/Filterbar';
 import MainCard from '../components/MainCard';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 
 const Inicio = () => {
@@ -11,7 +12,7 @@ const Inicio = () => {
     { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
     { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
     { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car4.png", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
     { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
     { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
     { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
@@ -32,7 +33,9 @@ const Inicio = () => {
       <div className="relative mt-6 mx-10 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
         {cars.map((car) => {
             return (
-              <Card image={car.image} name={car.name} model={car.model} year={car.year} />
+              <Link to={`/detalles`} >
+                <Card image={car.image} name={car.name} model={car.model} year={car.year} />
+              </Link>
             )
         })}
       </div>
