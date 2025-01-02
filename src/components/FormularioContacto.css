@@ -1,0 +1,170 @@
+.pagina-container {
+  background-color: #22223b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0;
+  align-items: start;
+  width: 100vw;
+  height: 80vh;
+}
+
+.titulo-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh 0 0 5vw;
+  height: 100%;
+  text-align: left;
+}
+
+.titulo-principal,
+.titulo-principal2 {
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+  padding: 0;
+  margin-left: 20%;
+}
+
+.titulo-principal {
+  font-size: 4rem;
+}
+
+.titulo-principal2 {
+  font-size: 4rem;
+  margin-top: 1rem;
+  margin-bottom: -5rem;
+}
+
+.titulo-seccion svg {
+  transform: rotate(90deg);
+  color: white;
+  font-size: 350px;
+}
+
+.formulario-seccion {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formulario-contacto {
+  background-color: #ffcb69;
+  width: 33vw;
+  height: 80vh;
+  margin: 5vh 5vw 0 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario-campos {
+  text-align: center;
+}
+
+.formulario-campos h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.campo-formulario {
+  margin: 3rem 0;
+  padding: 20px;
+  text-align: left;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-formulario {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.78125rem;
+  background-color: #8d643b;
+  box-shadow: inset 0 5px 5px rgb(0, 0, 0);
+}
+
+.input-formulario::placeholder {
+  color: white;
+}
+
+.input-formulario:focus {
+  outline: none;
+  color: white;
+}
+
+#motivo {
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  text-align: left;
+  box-shadow: none;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 0;
+}
+
+#motivo::placeholder {
+  color: #5d5454;
+}
+
+label[for="motivo"] {
+  text-align: left;
+  width: 100%;
+  display: block;
+  margin-left: 0;
+}
+
+.boton-enviar {
+  background-color: #4b4b82;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.boton-enviar:hover {
+  background-color: #4b4b82;
+  color: white;
+}
+
+/* Footer Social */
+.social-footer {
+  position: absolute;
+  bottom: 5vh;
+  left: 5vw;
+  color: white;
+}
+
+.social-text {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffcb69;
+}
