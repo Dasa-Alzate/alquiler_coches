@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const MainCard = ({ image, title, name, model }) => {
 
-  console.log(image)
   return (
     <div className="relative group flex flex-col w-full p-4 pt-6 h-60 md:h-72 lg:h-80 xl:h-96 bg-primary-900 text-white rounded-xl shadow-md hover:shadow-lg shadow-zinc-950/75 hover:shadow-zinc-950 transition-all duration-500">
       <p className="text-4xl font-bold transition-all duration-500 group-hover:text-primary-300 z-10">{title}</p>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ image, name, model, year }) => {
 
-  console.log(image)
   return (
     <div className="relative group flex flex-col p-0 h-60 md:h-52 lg:h-48 bg-transparent text-white rounded-xl cursor-pointer">
       <div className="flex flex-col items-center lg:items-start 
