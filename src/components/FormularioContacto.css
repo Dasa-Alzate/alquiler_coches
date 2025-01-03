@@ -12,29 +12,31 @@
 
 .pagina-container {
   background-color: var(--primary-900);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 2rem;
   padding: 0;
   align-items: start;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
 }
 
 .titulo-seccion {
+  position: relative;
+  flex-basis: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  margin: 5vh 0 0 5vw;
-  height: 100%;
+  justify-content: center;
+  height: 70vh;
   gap: 3rem;
 }
 
 .titulo-seccion img {
   width: 350px;
   height: auto;
-  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
   transform: rotate(90deg);
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease-in-out;
@@ -43,28 +45,22 @@
 
 .titulo-principal,
 .titulo-principal2 {
+  margin-top: -5rem;
   color: white;
   font-weight: 700;
   width: 100%;
   padding: 0;
   margin-left: 20%;
-  font-size: 4rem;
+  font-size: 6vh;
   line-height: 1.2;
 }
 
-.titulo-principal {
-  font-size: 4rem;
-  margin-top: 4rem;
-}
-
 .titulo-principal2 {
-  font-size: 4rem;
   margin-top: 1rem;
-  margin-bottom: -5rem;
 }
 
 .formulario-seccion {
-  width: 100%;
+  flex-basis: 40%;
   display: flex;
   justify-content: flex-end;
 }
@@ -72,9 +68,9 @@
 .formulario-contacto {
   background-color: var(--secondary-500);
   width: 33vw;
-  height: 80vh;
+  height: 75vh;
   margin: 5vh 5vw 0 0;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
 }
@@ -82,24 +78,28 @@
 .formulario-campos {
   width: 65%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .formulario-campos h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #000;
-  margin: 1.5rem 0 2rem;
+  color: #1B1B2F;
+  margin: 1.5rem -5vw 2rem;
+  text-align: center;
 }
 
 .campo-formulario {
-  margin: 3rem 0;
-  padding: 20px;
+  /* margin: 10% 0; */
   text-align: left;
 }
 
 .campo-formulario label {
   display: block;
   margin-bottom: 5px;
+  color: #1B1B2F;
   font-weight: 700;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .input-formulario::placeholder {
-  color: white;
+  color: #FFEDC6;
   opacity: 0.7 85;
 }
 
@@ -125,8 +125,8 @@
 }
 
 #motivo {
-  border: none;
-  border-bottom: 2px solid #000;
+  /* border: none; */
+  border-bottom: 2px solid #1B1B2F;
   background-color: transparent;
   padding: 10px 0;
   width: 100%;
@@ -134,7 +134,11 @@
 }
 
 #motivo::placeholder {
-  color: #5d5454;
+  color: #805D26;
+}
+
+#motivo:focus {
+	outline: transparent
 }
 
 label[for="motivo"] {
@@ -151,7 +155,7 @@ label[for="motivo"] {
   border: none;
   border-radius: 10px;
   display: block;
-  margin: -2rem auto;
+  margin: auto;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
