@@ -22,7 +22,7 @@ const Navbar = ({ activeLink, isLogged }) => {
         })}
       </ul>
 
-      <SearchBar/>
+      <SearchBar type="navbar"/>
 
       <ul className="flex space-x-8">
         <li><a href="/" className="text-secondary-500 hover:text-amber-200">Log In</a></li>

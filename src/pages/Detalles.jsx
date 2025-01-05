@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import DetailsCarrousel from '../components/DetailsCarrousel';
 import ReviewCard from '../components/ReviewCard';
-import Card from '../components/Card';
+import CarSlider from '../components/CarSlider';
 import Footer from '../components/Footer';
 import MainLayout from '../layouts/MainLayout';
 
@@ -25,14 +25,8 @@ const Detalles = () => {
 
       <DetailsCarrousel />
 
-      <h1 className='ml-4 font-bold text-2xl text-white mt-16'>También te podría interesar...</h1>
-      <div className="relative mt-6 mx-10 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        {cars.map((car, i) => {
-          return (
-            <Card key={i} image={car.image} name={car.name} model={car.model} year={car.year} />
-          )
-        })}
-      </div>
+      <h1 className='ml-4 mb-6 font-bold text-2xl text-white mt-16'>También te podría interesar...</h1>
+      <CarSlider cars={cars}/>
 
       <h1 className='ml-4 font-bold text-2xl text-white mt-16'>Lo que opinan nuestros clientes</h1>
       <div className="relative mt-6 mx-10 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
