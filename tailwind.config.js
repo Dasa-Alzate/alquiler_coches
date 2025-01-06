@@ -38,9 +38,10 @@ export default {
         lato: ['Lato', 'serif'],
       },
       boxShadow: {
-        'inner-lg': 'inset 0px 2px 2px 2px #624222',
-        'inner-xl': 'inset 0px 3px 3px 3px #624222',
-        'inner-2xl': 'inset 0px 4px 4px 4px #624222',
+        'inner-lg': 'inset 0px 2px 2px 2px',
+        'inner-xl': 'inset 0px 3px 3px 3px',
+        'inner-2xl': 'inset 0px 4px 4px 4px',
+        'inner-3xl': 'inset 0px 5px 5px 5px #000000',
       },
     },
   },

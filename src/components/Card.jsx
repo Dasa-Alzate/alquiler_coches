@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ image, name, model, year }) => {
+const Card = ({ image, name, model, year, favorited = false }) => {
 
   return (
     <div className="relative group flex flex-col p-0 h-60 md:h-52 lg:h-48 bg-transparent text-white rounded-xl cursor-pointer">
@@ -20,6 +20,7 @@ const Card = ({ image, name, model, year }) => {
         lg:bottom-14 group-hover:lg:bottom-4 lg:h-20 group-hover:lg:h-24 
         right-1/2 translate-x-1/2
         transition-all duration-500" src={image} alt={name} />
+      <img className={`absolute top-2 right-2 size-8 ${favorited ? "" : "hidden"}`} src="/heart-solid-icon.svg" alt={name} />
     </div>
   );
 };
