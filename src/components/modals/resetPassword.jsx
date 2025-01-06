@@ -58,14 +58,14 @@ const ResetPasswordModal = ({ isOpen, onClose }) => {
               onClick={onClose}
               className="px-4 py-2 text-sm bg-[#252525] text-white rounded-2xl hover:bg-primary-600 transition-colors"
             >
-              Cancelar
+              Submit
             </button>
             <button
-              type="submit"
+              type="button"
               className="px-4 py-2 text-sm bg-[#252525] text-white rounded-2xl
                        hover:bg-primary-600 transition-colors"
             >
-              Enviar
+              Log In
             </button>
           </div>
         </form>
