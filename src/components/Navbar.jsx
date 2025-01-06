@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import LoginModal from "./modals/login";
+import SignUpModal from "./modals/signup";
 
 const Navbar = ({ activeLink, isLogged }) => {
   const links = ["Inicio", "Reseñas", "Contacto"];
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   return (
     <nav className="bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex w-full justify-around items-center">
       <img src="logo.svg" alt="logo" />
@@ -40,13 +41,20 @@ const Navbar = ({ activeLink, isLogged }) => {
           </button>
         </li>
         <li>
-          <a href="/about" className="hover:text-gray-200">
+          <button
+            onClick={() => setIsSignUpOpen(true)}
+            className="text-secondary-500 hover:text-amber-200"
+          >
             Sign Up
-          </a>
+          </button>
         </li>
       </ul>
 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+      <SignUpModal
+        isOpen={isSignUpOpen}
+        onClose={() => setIsSignUpOpen(false)}
+      />
     </nav>
   );
 };
