@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TarjetaForm from '../components/TarjetaForm';
 import { Link } from "react-router-dom";
 
 const Pagos = () => {
@@ -21,40 +22,6 @@ const Pagos = () => {
       [e.target.name]: e.target.value,
     });
   };
-
-  const TarjetaForm = () => (
-    <div className="space-y-2 w-full">
-      <input
-        type="text"
-        name="numeroTarjeta"
-        placeholder="Número de tarjeta"
-        value={formData.numeroTarjeta}
-        onChange={handleInputChange}
-        maxLength="16"
-        pattern="\d*"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl"
-      />
-      <input
-        type="text"
-        name="fechaExpiracion"
-        placeholder="MM/AA"
-        value={formData.fechaExpiracion}
-        onChange={handleInputChange}
-        maxLength="5"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl"
-      />
-      <input
-        type="text"
-        name="cvv"
-        placeholder="CVV"
-        value={formData.cvv}
-        onChange={handleInputChange}
-        maxLength="4"
-        pattern="\d*"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl"
-      />
-    </div>
-  );
 
   return (
     <div className="bg-primary-900 w-screen h-[70vh] flex flex-row items-center">
@@ -79,73 +46,75 @@ const Pagos = () => {
           </h2>
 
           <div className="grid grid-cols-3 gap-4 mb-6">
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="/public/visa.svg"
-                alt="Visa"
-                className="w-16 h-16 object-contain"
+            <div className="flex flex-col items-center">
+              <input
+                type="radio"
+                id="visa"
+                value="visa"
+                name="metodoPago"
+                checked={metodoPago === "visa"}
+                onChange={handleMetodoPagoChange}
+                className="peer hidden"
               />
-              <div className="flex items-center">
-                <input
-                  type="radio"
-                  id="visa"
-                  value="visa"
-                  name="metodoPago"
-                  checked={metodoPago === "visa"}
-                  onChange={handleMetodoPagoChange}
-                  className="mr-2 accent-primary-900"
+              <label
+                htmlFor="visa"
+                className="border flex justify-center items-center w-48 h-32 mb-8 rounded-xl peer-checked:border-secondary-900 border-2 peer-checked:border-solid border-zinc-500/50 border-dashed peer-checked:grayscale-0 grayscale cursor-pointer transition-all duration-200"
+              >
+                <img
+                  src="/public/visa.svg"
+                  alt="Visa"
+                  className="w-28 h-28 object-contain"
                 />
-                <label htmlFor="visa" className="text-primary-900">
-                  Visa
-                </label>
-              </div>
-              {metodoPago === "visa" && <TarjetaForm />}
+              </label>
+
+              {metodoPago === "visa" && <TarjetaForm handleInputChange={handleInputChange} formData={formData} />}
             </div>
 
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="/public/mastercard.svg"
-                alt="Mastercard"
-                className="w-16 h-16 object-contain"
+            <div className="flex flex-col items-center">
+              <input
+                type="radio"
+                id="mastercard"
+                value="mastercard"
+                name="metodoPago"
+                checked={metodoPago === "mastercard"}
+                onChange={handleMetodoPagoChange}
+                className="peer hidden"
               />
-              <div className="flex items-center">
-                <input
-                  type="radio"
-                  id="mastercard"
-                  value="mastercard"
-                  name="metodoPago"
-                  checked={metodoPago === "mastercard"}
-                  onChange={handleMetodoPagoChange}
-                  className="mr-2 accent-primary-900"
+              <label
+                htmlFor="mastercard"
+                className="border flex justify-center items-center w-48 h-32 mb-8 rounded-xl peer-checked:border-secondary-900 border-2 peer-checked:border-solid border-zinc-500/50 border-dashed peer-checked:grayscale-0 grayscale cursor-pointer transition-all duration-200"
+              >
+                <img
+                  src="/public/mastercard.svg"
+                  alt="Mastercard"
+                  className="w-28 h-28 object-contain"
                 />
-                <label htmlFor="mastercard" className="text-primary-900">
-                  Mastercard
-                </label>
-              </div>
-              {metodoPago === "mastercard" && <TarjetaForm />}
+              </label>
+
+              {metodoPago === "mastercard" && <TarjetaForm handleInputChange={handleInputChange} formData={formData} />}
             </div>
 
-            {/* PayPal Column */}
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="/public/paypal.svg"
-                alt="PayPal"
-                className="w-16 h-16 object-contain"
+            <div className="flex flex-col items-center">
+              <input
+                type="radio"
+                id="paypal"
+                value="paypal"
+                name="metodoPago"
+                checked={metodoPago === "paypal"}
+                onChange={handleMetodoPagoChange}
+                className="peer hidden"
               />
-              <div className="flex items-center">
-                <input
-                  type="radio"
-                  id="paypal"
-                  value="paypal"
-                  name="metodoPago"
-                  checked={metodoPago === "paypal"}
-                  onChange={handleMetodoPagoChange}
-                  className="mr-2 accent-primary-900"
+              <label
+                htmlFor="paypal"
+                className="border flex justify-center items-center w-48 h-32 mb-8 rounded-xl peer-checked:border-secondary-900 border-2 peer-checked:border-solid border-zinc-500/50 border-dashed peer-checked:grayscale-0 grayscale cursor-pointer transition-all duration-200"
+              >
+                <img
+                  src="/public/paypal.svg"
+                  alt="Paypal"
+                  className="w-28 h-28 object-contain"
                 />
-                <label htmlFor="paypal" className="text-primary-900">
-                  PayPal
-                </label>
-              </div>
+              </label>
+
               {metodoPago === "paypal" && (
                 <div className="w-full">
                   <input
@@ -160,6 +129,7 @@ const Pagos = () => {
                 </div>
               )}
             </div>
+            
           </div>
         </div>
         <div className="flex flex-row justify-center">
