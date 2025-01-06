@@ -41,7 +41,7 @@ export default {
         'inner-lg': 'inset 0px 2px 2px 2px',
         'inner-xl': 'inset 0px 3px 3px 3px',
         'inner-2xl': 'inset 0px 4px 4px 4px',
-        'inner-3xl': 'inset 0px 5px 5px 5px #000000',
+        'inner-3xl': 'inset 0px 5px 5px 5px',
       },
     },
   },
