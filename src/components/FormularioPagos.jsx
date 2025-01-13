@@ -123,7 +123,7 @@ const Pagos = () => {
                     placeholder="Email de PayPal"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl"
+                    className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
                     required
                   />
                 </div>

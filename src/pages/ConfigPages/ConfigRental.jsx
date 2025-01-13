@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 const ConfigRental = ({ active }) => {
   const carsHistory = [
-    { image: "/images/cars/car3.png", name: "Toyota Prius - 12/Aug/24", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB - 22/Sep/24", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE - 20/Dec/24", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius - 12/Aug/24", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB - 22/Sep/24", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE - 20/Dec/24", model: "Sedan 350 4MATIC", year: "2023" },
   ];
 
   const currentCars = [
-    { image: "/images/cars/car4.png", name: "Hyundai SantaCruz - 25/Jan/25", model: "2.5T Limited AWD", year: "2025" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB - 25/Jan/25", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car4.webp", name: "Hyundai SantaCruz - 25/Jan/25", model: "2.5T Limited AWD", year: "2025" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB - 25/Jan/25", model: "SUV 250+", year: "2021" },
   ];
 
   return (

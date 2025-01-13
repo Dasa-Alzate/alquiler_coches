@@ -8,7 +8,7 @@ const ConfigWallet = ({ active }) => {
   // Creamos un objeto de ejemplo para la card
   const transactionExample = {
     id: 1,
-    image: "/public/images/cars/car1.png", // Asegúrate de tener esta imagen o cambia la ruta
+    image: "/public/images/cars/car1.webp", // Asegúrate de tener esta imagen o cambia la ruta
     name: "Toyota",
     model: "Corolla",
     year: "2024",
