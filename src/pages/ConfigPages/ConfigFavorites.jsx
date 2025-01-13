@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const ConfigFavorites = ({ active }) => {
   const cars = [
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car4.png", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
-    { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" }
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car4.webp", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" }
   ];
 
   return (

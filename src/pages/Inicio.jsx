@@ -9,14 +9,14 @@ import MainLayout from '../layouts/MainLayout';
 
 const Inicio = () => {
   const cars = [
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car4.png", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
-    { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" }
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car4.webp", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" }
   ];
 
   return (
@@ -24,8 +24,8 @@ const Inicio = () => {
       <Navbar activeLink="Inicio"/>
 
       <div className="my-6 mx-10 flex flex-col md:flex-row gap-6">
-        <MainCard image="/images/cars/car1.png" title="El mas exclusivo" name="Mercedes Benz EQE" model="Sedan 350 4MATIC" />
-        <MainCard image="/images/cars/car2.png" title="El favorito de todos" name="Mercedes Benz EQB" model="SUV 250+" />
+        <MainCard image="/images/cars/car1.webp" title="El mas exclusivo" name="Mercedes Benz EQE" model="Sedan 350 4MATIC" />
+        <MainCard image="/images/cars/car2.webp" title="El favorito de todos" name="Mercedes Benz EQB" model="SUV 250+" />
       </div>
 
       <Filterbar />

@@ -8,10 +8,10 @@ import MainLayout from '../layouts/MainLayout';
 
 const Detalles = () => {
   const cars = [
-    { image: "/images/cars/car1.png", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car3.png", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.png", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
+    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
+    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
   ];
   const reviews =[
     {name: "Jose Gomez Hidalgo", text: "Car rentals ha sido la mejor decision que he tomado para rentar un coche.", avatar: "avatar-doctor.svg", stars: 5},
