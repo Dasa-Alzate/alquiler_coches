@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-const SignUpModal = ({ isOpen, onClose }) => {
+const LoginModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
   });
@@ -32,37 +31,20 @@ const SignUpModal = ({ isOpen, onClose }) => {
           ×
         </button>
         <h2 className="text-2xl font-bold mb-6 text-white text-center">
-          Sign Up
+          Log In
         </h2>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4 relative">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-              value={formData.username}
-              onChange={handleChange}
-              required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl focus:border-primary-50"
-            />
-            <img
-              src="/public/user.png"
-              alt="user"
-              className="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 invert"
-            />
-          </div>
           <div className="mb-4">
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="@ email"
+              placeholder="@ Username or email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2  rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl  focus:border-primary-50"
+              className="w-full p-2  rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75  focus:border-primary-50"
             />
           </div>
 
@@ -75,7 +57,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl focus:border-primary-50"
+              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
               src="/public/key.png"
@@ -83,18 +65,25 @@ const SignUpModal = ({ isOpen, onClose }) => {
               className="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 invert"
             />
           </div>
+
+          <button
+            type="submit"
+            className="w-full bg-primary-700 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
+          >
+            Log in
+          </button>
           <div className="flex justify-between gap-2 mt-2">
             <button
               type="button"
-              className="w-full basis-1/2 bg-[#252525] text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
+              className="w-full basis-1/2 bg-neutral-800 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
             >
-              Submit
+              Forgot Password?
             </button>
             <button
               type="button"
-              className="w-full basis-1/2 bg-[#252525] text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
+              className="w-full basis-1/2 bg-neutral-800 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
             >
-              Log in
+              Sign up
             </button>
           </div>
         </form>
@@ -103,4 +92,4 @@ const SignUpModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default SignUpModal;
+export default LoginModal;

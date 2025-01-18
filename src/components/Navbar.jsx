@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
-import LoginModal from "./modals/login";
-import SignUpModal from "./modals/signup";
+import LoginModal from "./modals/Login";
+import SignUpModal from "./modals/Signup";
 
 const Navbar = ({ activeLink, isLogged }) => {
   const links = ["Inicio", "Reseñas", "Contacto"];
@@ -51,10 +51,7 @@ const Navbar = ({ activeLink, isLogged }) => {
       </ul>
 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-      <SignUpModal
-        isOpen={isSignUpOpen}
-        onClose={() => setIsSignUpOpen(false)}
-      />
+      <SignUpModal isOpen={isSignUpOpen} onClose={() => setIsSignUpOpen(false)} />
     </nav>
   );
 };

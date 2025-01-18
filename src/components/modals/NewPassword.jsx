@@ -44,7 +44,7 @@ const NewPasswordModal = ({ isOpen, onClose }) => {
               value={formData.newPassword}
               onChange={handleChange}
               required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] text-white placeholder:text-gray-50 shadow-inner-3xl  focus:border-primary-50"
+              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] text-white placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
               src="/public/key.png"
@@ -62,7 +62,7 @@ const NewPasswordModal = ({ isOpen, onClose }) => {
               value={formData.confirmPassword}
               onChange={handleChange}
               required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] text-white placeholder:text-gray-50 shadow-inner-3xl focus:border-primary-50"
+              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] text-white placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
               src="/public/key.png"

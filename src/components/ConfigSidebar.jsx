@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import ConfigButton from "./ConfigButton";
-import LogOutModal from "./modals/logOut";
+import LogOutModal from "./modals/Logout";
 
 const ConfigSidebar = ({ activeSection, setActiveSection }) => {
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false);

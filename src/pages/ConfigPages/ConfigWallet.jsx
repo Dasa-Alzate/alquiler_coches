@@ -49,19 +49,19 @@ const ConfigWallet = ({ active }) => {
           <input
             type="email"
             placeholder="Email"
-            className="w-[25vh] h-[5vh] bg-[#171717] rounded-3xl text-lg px-6 shadow-inner-3xl"
+            className="w-[25vh] h-[5vh] bg-[#171717] rounded-3xl text-lg px-6 shadow-inner-3xl shadow-black/75"
           />
         </div>
         <div className="flex flex-col">
           <input
             type="text"
             placeholder="Card Holder Name"
-            className="w-[25vh] h-[5vh] text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl"
+            className="w-[25vh] h-[5vh] text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl shadow-black/75"
           />
           <input
             type="text"
             placeholder="Card Number"
-            className="w-[25vh] h-[5vh] mt-5 text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl"
+            className="w-[25vh] h-[5vh] mt-5 text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl shadow-black/75"
           />
           <div className="flex gap-2 mt-5">
             <input
@@ -72,7 +72,7 @@ const ConfigWallet = ({ active }) => {
             <input
               type="text"
               placeholder="CVV Code"
-              className="w-[15vh] h-[6vh] ml-5 text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl"
+              className="w-[15vh] h-[6vh] ml-5 text-center bg-[#171717] rounded-3xl text-lg placeholder:text-gray-50 shadow-inner-3xl shadow-black/75"
             />
           </div>
           <input

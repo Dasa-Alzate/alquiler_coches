@@ -48,8 +48,7 @@ const ResetPasswordModal = ({ isOpen, onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded-3xl bg-[#171717] placeholder:text-gray-50 
-                       shadow-inner-3xl border-gray-600"
+              className="w-full p-2 rounded-3xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 border-gray-600"
             />
           </div>
           <div className="flex justify-center gap-2 mt-2">
