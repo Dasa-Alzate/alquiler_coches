@@ -14,7 +14,7 @@ const Filterbar = () => {
     <nav className="font-lato text-xl p-4 flex space-x-2 md:space-x-4 lg:space-x-8 w-full justify-around items-center">
 
       <button className="flex justify-center size-8 bg-secondary-600 rounded-lg">
-        <img class="w-4" src="sort.svg" alt="sort-filter" />
+        <img className="w-4" src="sort.svg" alt="sort-filter" />
       </button>
 
         {filters.map((filter) => {

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import $ from "jquery";
 import Navbar from '../components/Navbar';
 import ReviewCard from '../components/ReviewCard';
 import Footer from '../components/Footer';
@@ -9,11 +10,21 @@ import ReviewsPercentage from '../components/ReviewsPercentage';
 import ReviewsStarBars from '../components/ReviewsStarBars';
 
 const Reseñas = () => {
-  const reviews =[
-    {name: "Jose Gomez Hidalgo", text: "Car rentals ha sido la mejor decision que he tomado para rentar un coche.", avatar: "avatar-doctor.svg", stars: 5},
-    {name: "Ivan Saavedra Rodriguez ", text: "Como ha dicho Jose, Car rentals ha sido la mejor decision que he tomado para rentar un coche.", avatar: "avatar-astronaut.svg", stars: 4},
-    {name: "Jose Manuel Martinez Belando", text: "Esta página merece un 10.", avatar: "avatar-teacher.svg", stars: 5}
-  ];
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    $.ajax({
+      url: 'database.json',
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        setReviews(data.reviews);
+      },
+      error: function () {
+        setError('Error al cargar las reseñas.');
+      },
+    });
+  }, []);
 
   return (
     <MainLayout>

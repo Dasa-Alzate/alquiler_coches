@@ -1,35 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import DetailsMenu from '../components/DetailsMenu';
 
-const DetailsCarrousel = ({ image, title, name, model }) => {
+const DetailsCarrousel = ({ selectedCar }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedCar.images.length);
+      }, 3000);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused, selectedCar.images.length]);
 
   const changeIndex = (index) => {
     setCurrentIndex(index);
+    setIsPaused(true);
+    clearInterval(intervalRef.current);
   };
-
-  const selectedCar = 
-  { name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025", transmission: "Automático", speed: "0-100 km/h - 6seg", fuel: "Gasolina", engine: "281 hp @ 5800 rmp", yield: "10,7 L/100km", seats: "5", images: [
-    "/images/car_details/4-1.png",
-    "/images/car_details/4-2.png",
-    "/images/car_details/4-3.png",
-    "/images/car_details/4-4.png",
-    "/images/car_details/4-5.png",
-    "/images/car_details/4-6.png",
-    "/images/car_details/4-7.png",
-    "/images/car_details/4-8.png",
-    "/images/car_details/4-9.png",
-    "/images/car_details/4-10.png"
-  ] };
 
   return (
     <div className="flex gap-4 w-full m-0 mt-4 ml-4 p-0 items-center">
-      <DetailsMenu />
+      <DetailsMenu selectedCar={selectedCar} />
 
       <ul className="flex flex-col p-2 gap-y-1.5 -ml-12 z-30">
         {selectedCar.images.map((_, index) => (
-          <li key={index} onClick={() => changeIndex(index)} className={`cursor-pointer w-2 rounded-full bg-zinc-400 transition-all duration-300 ${index === currentIndex ? "h-8" : "h-2"}`}>
-          </li>
+          <li
+            key={index}
+            onClick={() => changeIndex(index)}
+            className={`cursor-pointer w-2 rounded-full bg-zinc-400 transition-all duration-300 ${
+              index === currentIndex ? "h-8" : "h-2"
+            }`}
+          ></li>
         ))}
       </ul>
 
@@ -42,7 +46,12 @@ const DetailsCarrousel = ({ image, title, name, model }) => {
           }}
         >
           {selectedCar.images.map((image, index) => (
-            <img key={index} className="h-full object-cover" src={image} alt={`Imagen ${index + 1}`} />
+            <img
+              key={index}
+              className="h-full object-cover"
+              src={"/public/images" + image}
+              alt={`Imagen ${index + 1}`}
+            />
           ))}
         </div>
       </div>

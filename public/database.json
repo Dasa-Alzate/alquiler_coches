@@ -1,0 +1,162 @@
+{
+    "cars": [
+        { 
+            "image": "/images/cars/car1.webp",
+            "name": "Mercedes Benz EQE",
+            "model": "Sedan 350 4MATIC",
+            "year": "2023" 
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021" 
+        },{
+            "image": "/images/cars/car3.webp",
+            "name": "Toyota Prius",
+            "model": "4º Gen",
+            "year": "2022" 
+        },{
+            "image": "/images/cars/car4.webp",
+            "name": "Hyundai SantaCruz",
+            "model": "2.5T Limited AWD",
+            "year": "2025" 
+        },{
+            "image": "/images/cars/car3.webp",
+            "name": "Toyota Prius",
+            "model": "4º Gen",
+            "year": "2022" 
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021" 
+        },{
+            "image": "/images/cars/car1.webp",
+            "name": "Mercedes Benz EQE",
+            "model": "Sedan 350 4MATIC",
+            "year": "2023" 
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021" 
+        }
+    ],
+    "carsHistory": [
+        {
+            "image": "/images/cars/car3.webp",
+            "name": "Toyota Prius - 12/Aug/24",
+            "model": "4º Gen",
+            "year": "2022" 
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB - 22/Sep/24",
+            "model": "SUV 250+",
+            "year": "2021" 
+        },{
+            "image": "/images/cars/car1.webp",
+            "name": "Mercedes Benz EQE - 20/Dec/24",
+            "model": "Sedan 350 4MATIC",
+            "year": "2023" 
+        }
+    ],
+    "currentCars": [
+        {
+            "image": "/images/cars/car4.webp",
+            "name": "Hyundai SantaCruz - 25/Jan/25",
+            "model": "2.5T Limited AWD",
+            "year": "2025" 
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB - 25/Jan/25",
+            "model": "SUV 250+",
+            "year": "2021" 
+        }
+    ],
+    "favoriteCars": [
+        {
+            "image": "/images/cars/car1.webp",
+            "name": "Mercedes Benz EQE",
+            "model": "Sedan 350 4MATIC",
+            "year": "2023"
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021"
+        },{
+            "image": "/images/cars/car3.webp",
+            "name": "Toyota Prius",
+            "model": "4º Gen",
+            "year": "2022"
+        },{
+            "image": "/images/cars/car4.webp",
+            "name": "Hyundai SantaCruz",
+            "model": "2.5T Limited AWD",
+            "year": "2025"
+        },{
+            "image": "/images/cars/car3.webp",
+            "name": "Toyota Prius",
+            "model": "4º Gen",
+            "year": "2022"
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021"
+        },{
+            "image": "/images/cars/car1.webp",
+            "name": "Mercedes Benz EQE",
+            "model": "Sedan 350 4MATIC",
+            "year": "2023"
+        },{
+            "image": "/images/cars/car2.webp",
+            "name": "Mercedes Benz EQB",
+            "model": "SUV 250+",
+            "year": "2021"
+        }
+    ],
+    "selectedCar": {
+        "name": "Hyundai SantaCruz",
+        "model": "2.5T Limited AWD",
+        "year": "2025",
+        "transmission": "Automático",
+        "speed": "0-100 km/h - 6seg",
+        "fuel": "Gasolina",
+        "engine": "281 hp @ 5800 rmp",
+        "yield": "10,7 L/100km",
+        "seats": "5",
+        "images": [
+            "/car_details/4-1.png",
+            "/car_details/4-2.png",
+            "/car_details/4-3.png",
+            "/car_details/4-4.png",
+            "/car_details/4-5.png",
+            "/car_details/4-6.png",
+            "/car_details/4-7.png",
+            "/car_details/4-8.png",
+            "/car_details/4-9.png",
+            "/car_details/4-10.png"
+        ]
+    },
+    "reviews": [
+        {
+            "name": "Jose Gomez Hidalgo",
+             "text": "Car rentals ha sido la mejor decision que he tomado para rentar un coche.",
+             "avatar": "avatar-doctor.svg",
+             "stars": 5},
+
+        {
+            "name": "Ivan Saavedra Rodriguez ",
+             "text": "Como ha dicho Jose, Car rentals ha sido la mejor decision que he tomado para rentar un coche.",
+             "avatar": "avatar-astronaut.svg",
+             "stars": 4},
+
+        {
+            "name": "Jose Manuel Martinez Belando",
+             "text": "Esta página merece un 10.",
+             "avatar": "avatar-teacher.svg",
+             "stars": 5
+        }
+    ]
+}

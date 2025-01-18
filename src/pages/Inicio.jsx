@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import $ from "jquery";
 import Navbar from '../components/Navbar';
 import Filterbar from '../components/Filterbar';
 import MainCard from '../components/MainCard';
@@ -8,16 +9,21 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 
 const Inicio = () => {
-  const cars = [
-    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car4.webp", name: "Hyundai SantaCruz", model: "2.5T Limited AWD", year: "2025" },
-    { image: "/images/cars/car3.webp", name: "Toyota Prius", model: "4º Gen", year: "2022" },
-    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" },
-    { image: "/images/cars/car1.webp", name: "Mercedes Benz EQE", model: "Sedan 350 4MATIC", year: "2023" },
-    { image: "/images/cars/car2.webp", name: "Mercedes Benz EQB", model: "SUV 250+", year: "2021" }
-  ];
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    $.ajax({
+      url: 'database.json',
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        setCars(data.cars);
+      },
+      error: function () {
+        setError('Error al cargar las reseñas.');
+      },
+    });
+  }, []);
 
   return (
     <MainLayout>
@@ -31,9 +37,9 @@ const Inicio = () => {
       <Filterbar />
 
       <div className="relative mt-6 mx-10 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        {cars.map((car) => {
+        {cars.map((car, i) => {
             return (
-              <Link to={`/detalles`} >
+              <Link to={`/detalles`} key={i}>
                 <Card image={car.image} name={car.name} model={car.model} year={car.year} />
               </Link>
             )
