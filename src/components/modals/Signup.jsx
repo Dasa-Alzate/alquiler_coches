@@ -24,7 +24,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-[#171717] p-8 rounded-3xl shadow-xl w-full max-w-md relative">
+      <div className="bg-neutral-900 p-8 rounded-3xl shadow-xl w-full max-w-md relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-5xl text-white hover:text-red-500"
@@ -45,7 +45,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
               value={formData.username}
               onChange={handleChange}
               required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
+              className="w-full p-2 pl-12 rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
               src="/public/user.png"
@@ -62,7 +62,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2  rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
+              className="w-full p-2  rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
           </div>
 
@@ -75,7 +75,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full p-2 pl-12 rounded-2xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
+              className="w-full p-2 pl-12 rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
               src="/public/key.png"

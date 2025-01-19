@@ -36,7 +36,7 @@ const Pagos = () => {
         <img
           src="/images/arrow.svg"
           alt="arrow"
-          className="w-[250px] rotate-90 invert"
+          className="w-64 rotate-90 invert"
         />
       </div>
       <div className="basis-1/2 p-6 mt-20 h-[70vh] bg-secondary-500 rounded-lg shadow-lg flex flex-col justify-between">
@@ -123,7 +123,7 @@ const Pagos = () => {
                     placeholder="Email de PayPal"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
+                    className="w-full p-2 rounded-xl bg-secondary-950 border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
                     required
                   />
                 </div>
@@ -135,7 +135,7 @@ const Pagos = () => {
         <div className="flex flex-row justify-center">
           <button
             type="submit"
-            className="w-[20vh] bg-[#4B4B82] text-white mx-20 py-3 px-4 rounded hover:bg-primary-900 transition-colors duration-200"
+            className="w-[20vh] bg-primary-400 text-white mx-20 py-3 px-4 rounded hover:bg-primary-900 transition-colors duration-200"
             onClick={(e) => {
               e.preventDefault();
               console.log("Método de pago seleccionado:", metodoPago);
@@ -146,7 +146,7 @@ const Pagos = () => {
           </button>
           <Link
             to="/"
-            className="w-[20vh] bg-[#4B4B82] text-white mx-20 py-3 px-4 rounded hover:bg-primary-900 transition-colors duration-200 text-center"
+            className="w-[20vh] bg-primary-400 text-white mx-20 py-3 px-4 rounded hover:bg-primary-900 transition-colors duration-200 text-center"
           >
             Cancelar
           </Link>

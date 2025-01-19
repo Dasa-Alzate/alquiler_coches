@@ -11,7 +11,7 @@ const TarjetaForm = ({ handleInputChange, formData }) => {
         onChange={handleInputChange}
         maxLength="16"
         pattern="\d*"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
+        className="w-full p-2 rounded-xl bg-secondary-950 border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
       />
       <input
         type="text"
@@ -20,7 +20,7 @@ const TarjetaForm = ({ handleInputChange, formData }) => {
         value={formData.fechaExpiracion}
         onChange={handleInputChange}
         maxLength="5"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
+        className="w-full p-2 rounded-xl bg-secondary-950 border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
       />
       <input
         type="text"
@@ -30,7 +30,7 @@ const TarjetaForm = ({ handleInputChange, formData }) => {
         onChange={handleInputChange}
         maxLength="4"
         pattern="\d*"
-        className="w-full p-2 rounded-xl bg-[#8D643B] border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
+        className="w-full p-2 rounded-xl bg-secondary-950 border-none text-white placeholder-gray-50 shadow-inner-xl shadow-stone-900/50"
       />
     </div>
   );

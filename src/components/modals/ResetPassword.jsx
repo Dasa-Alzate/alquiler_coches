@@ -27,7 +27,7 @@ const ResetPasswordModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-[#171717] p-8 rounded-3xl shadow-xl w-full max-w-md relative">
+      <div className="bg-neutral-900 p-8 rounded-3xl shadow-xl w-full max-w-md relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-5xl text-white hover:text-red-500"
@@ -48,20 +48,20 @@ const ResetPasswordModal = ({ isOpen, onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded-3xl bg-[#171717] placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 border-gray-600"
+              className="w-full p-2 rounded-3xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 border-gray-600"
             />
           </div>
           <div className="flex justify-center gap-2 mt-2">
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 text-sm bg-[#252525] text-white rounded-2xl hover:bg-primary-600 transition-colors"
+              className="px-4 py-2 text-sm bg-neutral-800 text-white rounded-2xl hover:bg-primary-600 transition-colors"
             >
               Submit
             </button>
             <button
               type="button"
-              className="px-4 py-2 text-sm bg-[#252525] text-white rounded-2xl
+              className="px-4 py-2 text-sm bg-neutral-800 text-white rounded-2xl
                        hover:bg-primary-600 transition-colors"
             >
               Log In

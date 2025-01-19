@@ -16,49 +16,49 @@ const ConfigAccessibility = ({ active }) => {
           <input
             type="button"
             value="Tamaño de texto"
-            className="bg-[#171717] rounded-lg py-2 px-6 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Contraste de color"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Modo Oscuro"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 mb-4">
         <h3 className="text-xl mt-10 mb-5">Acceso</h3>
         <hr />
         <div className="flex flex-col gap-4">
           <input
             type="button"
             value="Lectura en voz alta"
-            className="bg-[#171717] rounded-lg py-2 px-6 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Navegación por teclado"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Lectores de pantalla"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Idiomas"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
           <input
             type="button"
             value="Entrada de texto"
-            className="bg-[#171717] rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-[5px_5px_5px_5px_#000000] cursor-pointer"
+            className="bg-neutral-900 rounded-lg py-2 px-6 mt-5 text-lg w-fit shadow-xl shadow-black/75 cursor-pointer"
           />
         </div>
       </div>

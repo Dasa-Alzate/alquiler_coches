@@ -14,7 +14,7 @@ const LogOutModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-[#171717] p-8 rounded-3xl shadow-xl w-full max-w-md relative">
+      <div className="bg-neutral-900 p-8 rounded-3xl shadow-xl w-full max-w-md relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-5xl text-white hover:text-red-500"
@@ -28,7 +28,7 @@ const LogOutModal = ({ isOpen, onClose }) => {
         <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={onClose}
-            className="px-6 py-2 text-sm bg-[#cb6b30] text-white rounded-2xl hover:bg-[#ab5c2c] transition-colors"
+            className="px-6 py-2 text-sm bg-secondary-700 text-white rounded-2xl hover:bg-secondary-900 transition-colors"
           >
             Eliminar cuenta
           </button>
