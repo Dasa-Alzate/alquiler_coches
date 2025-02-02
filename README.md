@@ -8,7 +8,9 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=2D8F89)
 
-![preview](https://github.com/Whitefox-SA/Whitefox-SA.github.io/raw/main/assets/preview.png)
+![preview](https://github.com/Dasa-Alzate/alquiler_coches/raw/main/preview.png)
+
+![preview](https://github.com/Dasa-Alzate/alquiler_coches/raw/main/preview2.png)
 
 </div>
 
