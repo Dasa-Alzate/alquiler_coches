@@ -47,7 +47,7 @@ const NewPasswordModal = ({ isOpen, onClose }) => {
               className="w-full p-2 pl-12 rounded-2xl bg-neutral-900 text-white placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
-              src="/public/key.png"
+              src="/public/key.webp"
               alt="key"
               className="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 invert"
             />
@@ -65,7 +65,7 @@ const NewPasswordModal = ({ isOpen, onClose }) => {
               className="w-full p-2 pl-12 rounded-2xl bg-neutral-900 text-white placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
-              src="/public/key.png"
+              src="/public/key.webp"
               alt="key"
               className="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 invert"
             />

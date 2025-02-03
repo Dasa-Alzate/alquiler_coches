@@ -5,7 +5,6 @@ const LogOutModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Aquí iría la lógica de logout
     navigate("/");
     onClose();
   };
