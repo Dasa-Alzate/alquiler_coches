@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -22,8 +23,20 @@ const LoginModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-neutral-900 p-8 rounded-3xl shadow-xl w-full max-w-md relative">
+    <motion.div
+      className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <motion.div
+        className="bg-neutral-900 p-8 rounded-3xl shadow-xl w-full max-w-md relative"
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        exit={{ y: "100vh" }}
+        transition={{ duration: 0.5 }}
+      >
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-5xl text-white hover:text-red-500"
@@ -44,7 +57,7 @@ const LoginModal = ({ isOpen, onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2  rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75  focus:border-primary-50"
+              className="w-full p-2 rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
           </div>
 
@@ -60,7 +73,7 @@ const LoginModal = ({ isOpen, onClose }) => {
               className="w-full p-2 pl-12 rounded-2xl bg-neutral-900 placeholder:text-gray-50 shadow-inner-3xl shadow-black/75 focus:border-primary-50"
             />
             <img
-              src="/public/key.png"
+              src="/public/key.webp"
               alt="key"
               className="w-6 h-6 absolute left-3 top-1/2 transform -translate-y-1/2 invert"
             />
@@ -87,8 +100,8 @@ const LoginModal = ({ isOpen, onClose }) => {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
