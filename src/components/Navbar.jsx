@@ -10,9 +10,9 @@ const Navbar = ({ activeLink, isLogged }) => {
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   return (
     <nav className="bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex w-full justify-around items-center">
-      <img src="logo.svg" alt="logo" />
+      <img src="/logo.svg" alt="logo" />
 
-      <ul className="flex space-x-8">
+      <ul className="lg:flex space-x-8 hidden">
         {links.map((link) => {
           return (
             <li key={link}>

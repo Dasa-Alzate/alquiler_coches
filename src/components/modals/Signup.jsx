@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const SignUpModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -84,12 +85,10 @@ const SignUpModal = ({ isOpen, onClose }) => {
             />
           </div>
           <div className="flex justify-between gap-2 mt-2">
-            <button
-              type="button"
-              className="w-full basis-1/2 bg-primary-700 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"
-            >
+
+            <Link to={`/configuracion`} className="w-full basis-1/2 bg-primary-700 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors text-center">
               Submit
-            </button>
+            </Link>
             <button
               type="button"
               className="w-full basis-1/2 bg-neutral-800 text-white py-1.5 px-3 text-sm rounded hover:bg-primary-600 transition-colors"

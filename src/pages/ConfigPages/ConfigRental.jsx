@@ -9,15 +9,15 @@ const ConfigRental = ({ active }) => {
 
   useEffect(() => {
     $.ajax({
-      url: "database.json",
-      method: "GET",
-      dataType: "json",
+      url: `http://localhost:3000/cars/paginated/2`,
+      method: 'GET',
+      dataType: 'json',
       success: function (data) {
-        setCarsHistory(data.carsHistory);
-        setCurrentCars(data.currentCars);
+        setCarsHistory(data);
+        setCurrentCars(data);
       },
       error: function () {
-        setError("Error al cargar las reseñas.");
+        console.error("Error al cargar las reseñas.");
       },
     });
   }, []);
@@ -42,7 +42,7 @@ const ConfigRental = ({ active }) => {
         <h3 className="text-xl">Notifications and policies</h3>
         <hr />
 
-        <div className="flex justify-evenly pb-4">
+        <div className="flex flex-col lg:flex-row justify-evenly pb-4">
           <div className="flex flex-col gap-4">
             <h3 className="text-xl">Notification preferences</h3>
             <input

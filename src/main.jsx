@@ -1,11 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-)
+try {
+  const root = document.getElementById('root');
+  if (!root) {
+    console.error('El elemento root no se encuentra en el HTML.');
+  } else {
+    console.log('Elemento root encontrado, inicializando React...');
+    ReactDOM.createRoot(root).render(
+      <React.StrictMode>
+          <App />
+      </React.StrictMode>,
+    );
+  }
+} catch (error) {
+  console.error('Error al inicializar React:', error);
+}

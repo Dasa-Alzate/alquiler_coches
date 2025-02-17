@@ -6,20 +6,21 @@ import { Link } from "react-router-dom";
 
 const ConfigFavorites = ({ active }) => {
   const [cars, setCars] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     $.ajax({
-      url: "database.json",
-      method: "GET",
-      dataType: "json",
+      url: `http://localhost:3000/cars/paginated/${page}`,
+      method: 'GET',
+      dataType: 'json',
       success: function (data) {
-        setCars(data.cars);
+        setCars([...cars, ...data]);
       },
       error: function () {
-        setError("Error al cargar las reseñas.");
+        console.error('Error al cargar las reseñas.');
       },
     });
-  }, []);
+  }, [page]);
 
   return (
     <nav
@@ -47,7 +48,7 @@ const ConfigFavorites = ({ active }) => {
           );
         })}
       </div>
-      <div className="h-6 w-full -mx-4 flex justify-center items-end text-zinc-200 bg-gradient-to-t from-zinc-600/75 via-70% via-zinc-700/10 transition-all duration-300 hover:h-10 hover:-mt-4 hover:font-bold hover:from-zinc-400/50 cursor-pointer">
+      <div className="h-6 w-full -mx-4 flex justify-center items-end text-zinc-200 bg-gradient-to-t from-zinc-600/75 via-70% via-zinc-700/10 transition-all duration-300 hover:h-10 hover:-mt-4 hover:font-bold hover:from-zinc-400/50 cursor-pointer" onClick={() => setPage(page+1)}>
         <span className="h-fit">Ver mas</span>
       </div>
     </nav>

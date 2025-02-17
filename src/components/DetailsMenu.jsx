@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const DetailsMenu = ({ selectedCar }) => {
 
   return (
-    <div className="relative flex flex-col basis-4/5 h-96 relative group p-6 pr-12 bg-primary-900 text-white rounded-2xl shadow-md hover:shadow-lg shadow-zinc-950/75 hover:shadow-zinc-950 transition-all duration-500 z-10">
+    <div className="relative flex flex-col basis-4/5 h-[60vh] relative group p-6 pr-12 bg-primary-900 text-white rounded-2xl shadow-md hover:shadow-lg shadow-zinc-950/75 hover:shadow-zinc-950 transition-all duration-500 z-10">
       <p className="text-4xl font-bold transition-all duration-500 group-hover:text-primary-300 z-10">
-        {selectedCar.name}
+        {selectedCar.id}
       </p>
       <p className="text-md mt-1 transition-all duration-500 group-hover:text-stone-300/75">
         {selectedCar.year}

@@ -39,7 +39,7 @@ const Pagos = () => {
           className="w-64 rotate-90 invert"
         />
       </div>
-      <div className="basis-1/2 p-6 mt-20 h-[70vh] bg-secondary-500 rounded-lg shadow-lg flex flex-col justify-between">
+      <div className="basis-1/2 p-6 mt-20 h-[75vh] bg-secondary-500 rounded-lg shadow-lg flex flex-col justify-between">
         <div>
           <h2 className="text-3xl font-bold mb-6 text-primary-900 text-center">
             Selecciona el método de pago

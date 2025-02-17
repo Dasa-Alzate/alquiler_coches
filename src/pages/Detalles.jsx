@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import $ from "jquery";
+import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import DetailsCarrousel from '../components/DetailsCarrousel';
 import ReviewCard from '../components/ReviewCard';
@@ -11,23 +12,43 @@ const Detalles = () => {
   const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState({});
   const [reviews, setReviews] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
     $.ajax({
-      url: 'database.json',
+      url: `http://localhost:3000/cars/${id}`,
       method: 'GET',
       dataType: 'json',
       success: function (data) {
-        setCars(data.cars);
-        setSelectedCar(data.selectedCar);
-        setReviews(data.reviews);
+        setSelectedCar(data);
       },
       error: function () {
         console.log('Error al cargar las reseñas.');
-        setError('Error al cargar las reseñas.');
       },
     });
-  }, []);
+    $.ajax({
+      url: `http://localhost:3000/cars/paginated/2`,
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        setCars(data);
+      },
+      error: function () {
+        console.log('Error al cargar las reseñas.');
+      },
+    });
+    $.ajax({
+      url: `http://localhost:3000/reviews/`,
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        setReviews(data);
+      },
+      error: function () {
+        console.log('Error al cargar las reseñas.');
+      },
+    });
+  }, [id]);
 
   return (
     <MainLayout>
@@ -44,7 +65,7 @@ const Detalles = () => {
       <div className="relative mt-6 mx-10 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {reviews.map((review, i) => {
         return (
-          <ReviewCard key={i} name={review.name} text={review.text} avatar={review.avatar} stars={review.stars} />
+          <ReviewCard key={i} name={review.user.name} text={review.text} avatar={review.user.avatar} stars={review.stars} />
         )
       })}
       </div>

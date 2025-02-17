@@ -5,11 +5,11 @@ const Footer = ({ activeLink, isLogged }) => {
   const links = ['Inicio', 'Reseñas', 'Contacto'];
 
   return (
-    <footer className="bg-zinc-900 font-lato text-white/75 p-10 flex w-full justify-evenly items-center">
+    <footer className="bg-zinc-900 font-lato text-white/75 p-10 flex w-full justify-evenly items-center flex-col md:flex-row space-y-10">
 
       <div className="flex flex-col">
         <div className="flex">
-          <img src="logo.svg" alt="logo" />
+          <img src="/logo.svg" alt="logo" />
           <span className='ml-2 text-3xl font-bold'>Car Rentals</span>
         </div>
         <span className='mt-4'>C. San Vicente de Paul, 6, 30100 Murcia</span>

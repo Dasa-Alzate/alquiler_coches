@@ -22,24 +22,24 @@ const DetailsCarrousel = ({ selectedCar }) => {
   };
 
   return (
-    <div className="flex gap-4 w-full m-0 mt-4 ml-4 p-0 items-center">
+    <div className="flex flex-col lg:flex-row gap-4 w-full m-0 mt-4 ml-4 p-0 items-center">
       <DetailsMenu selectedCar={selectedCar} />
 
-      <ul className="flex flex-col p-2 gap-y-1.5 -ml-12 z-30">
+      <ul className="flex lg:flex-col p-2 gap-[0.75vh] lg:-ml-12 z-30">
         {selectedCar.images.map((_, index) => (
           <li
             key={index}
             onClick={() => changeIndex(index)}
             className={`cursor-pointer w-2 rounded-full bg-zinc-400 transition-all duration-300 ${
-              index === currentIndex ? "h-8" : "h-2"
+              index === currentIndex ? "w-[10vh] lg:h-[10vh] lg:w-[1.5vh]" : "h-[1.5vh] w-[1.5vh]"
             }`}
           ></li>
         ))}
       </ul>
 
-      <div className="relative flex overflow-hidden w-full rounded-l-3xl -ml-12 z-0">
+      <div className="relative flex overflow-hidden w-10/12 lg:w-full rounded-xl lg:rounded-l-3xl md:-ml-12 z-0 aspect-[460/327]">
         <div
-          className="flex transition-transform duration-500"
+          className="flex transition-transform duration-500 aspect-[460/327]"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
             width: `${selectedCar.images.length * 100}%`,
@@ -48,7 +48,7 @@ const DetailsCarrousel = ({ selectedCar }) => {
           {selectedCar.images.map((image, index) => (
             <img
               key={index}
-              className="h-full object-cover"
+              className="h-full object-cover aspect-[460/327]"
               src={"/public/images" + image}
               alt={`Imagen ${index + 1}`}
             />

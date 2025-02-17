@@ -6,10 +6,12 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   build: {
-    outDir: path.join(__dirname, "build"),
-  }},{
+    outDir: path.resolve(__dirname, 'docs'),
+    sourcemap: false,
+  },
   plugins: [
     react(),
     tailwindcss('./tailwind.config.js'),
   ],
+  // base: '/docs/'
 })

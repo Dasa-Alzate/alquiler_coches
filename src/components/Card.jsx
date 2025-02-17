@@ -14,7 +14,7 @@ const Card = ({ image, name, model, year, favorited = false }) => {
         <p className="text-md lg:text-sm transition-all duration-500 opacity-0 group-hover:opacity-100 text-stone-300/75">{model}</p>
         <p className="text-md lg:text-sm -mt-1 text-secondary-500 transition-all duration-500 opacity-0 group-hover:opacity-100 text-secondary-300/75">{year}</p>
       </div>
-      <img className="absolute 
+      <img className="absolute aspect-2/3
         bottom-10 group-hover:bottom-5 h-36 group-hover:h-32 
         md:bottom-2 md:group-hover:bottom-1 md:h-32 group-hover:md:h-28 
         lg:bottom-14 group-hover:lg:bottom-4 lg:h-20 group-hover:lg:h-24 

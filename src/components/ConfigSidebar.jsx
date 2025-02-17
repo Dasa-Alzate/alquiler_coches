@@ -6,9 +6,11 @@ import LogOutModal from "./modals/Logout";
 
 const ConfigSidebar = ({ activeSection, setActiveSection }) => {
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <nav className="relative bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex flex-col gap-8 basis-1/5 justify-start items-center">
+    <>
+    <nav className={`relative absolute top-0 left-0 bg-primary-900/50 font-lato text-2xl text-white/75 p-4 flex-col gap-8 basis-1/5 justify-start items-center ${isSidebarOpen ? 'flex' : 'hidden lg:flex'}`}>
       <div className=" transition-all duration-200 size-24 relative group rounded-full overflow-hidden cursor-pointer">
         <img
           className=" transition-all duration-200 size-24 group-hover:brightness-75 group-hover:blur-sm"
@@ -93,6 +95,8 @@ const ConfigSidebar = ({ activeSection, setActiveSection }) => {
         onClose={() => setIsLogOutModalOpen(false)}
       />
     </nav>
+    <button className="lg:hidden absolute top-4 left-4 z-50 bg-gray-800 text-white p-2 rounded-md" onClick={() => setIsSidebarOpen(!isSidebarOpen)} >☰</button>
+    </>
   );
 };
 
